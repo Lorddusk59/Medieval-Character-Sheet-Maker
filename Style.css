@@ -1,0 +1,126 @@
+body {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #f4e4c1;
+    text-align: center;
+    color: #3a2612;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: rgba(139, 90, 43, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 8px solid #5a3d1e;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
+}
+
+h1,
+h2 {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+button {
+    background: #5a3d1e;
+    color: white;
+    border: 2px solid #3a2612;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'MedievalSharp', cursive;
+    border-radius: 8px;
+    margin: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #7a5230;
+    transform: scale(1.1);
+}
+
+select {
+    background: #d4c19c;
+    border: 2px solid #5a3d1e;
+    padding: 10px;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+}
+
+select:hover {
+    background-color: #bfa35d;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.skill-bar {
+    width: 60%;
+    background-color: #d4c19c;
+    border: 2px solid #5a3d1e;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar div {
+    height: 100%;
+    background: linear-gradient(to right, #ff7f50, #f7b708);
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+.skill-bar .skill-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.skill-bar:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.skill-bar:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#output {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+#points {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f7b708;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+

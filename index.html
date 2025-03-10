@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <title>Medieval Character Sheet</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medieval Character Sheet</h1>
+
+        <label for="race">Choose your race:</label>
+            <select id="race">
+                <option value="Human">Human</option>
+                <option value="Elf">Elf</option>
+                <option value="Orc">Orc</option>
+                <option value="Dwarf">Dwarf</option>
+            </select>
+
+        <label for="class">Choose your class:</label>
+            <select id="class" onchange="updateSubclasses()">
+                <option value="Knight">Knight</option>
+                <option value="Mage">Mage</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Druid">Druid</option>
+            </select>
+        
+        <label for="subclass">Choose your subclass:</label>
+        <select id="subclass"></select>
+
+        <h2>Skill Points: <span id="points">10</span></h2>
+        <button onclick="generateRandomCharacter()">Generate Random Character</button>
+
+<div id="skills">
+    <div class="skills">
+        Strength: <span id="strength">0</span>
+        <div class="skill-bar"><div id="strength-bar"></div></div>
+            <div class="tooltip">Strength determines your physical power and melee combat effectiveness.</div>
+        <button onclick="addSkill('strength')">+</button>
+        <button onclick="removeSkill('strength')">-</button>
+    </div>
+
+    <div class="skills">
+        Dexterity: <span id="dexterity">0</span>
+        <div class="skill-bar"><div id="dexterity-bar"></div></div>
+            <div class="tooltip">Dexterity affects agility and ranged attacks.</div>
+        <button onclick="addSkill('dexterity')">+</button>
+        <button onclick="removeSkill('dexterity')">-</button>
+    </div>
+
+    <div class="skills">
+        Intelligence: <span id="intelligence">0</span>
+        <div class="skill-bar"><div id="intelligence-bar"></div></div>
+            <div class="tooltip">Intelligence governs your magic and problem-solving ability.</div>
+        <button onclick="addSkill('intelligence')">+</button>
+        <button onclick="removeSkill('intelligence')">-</button>
+    </div>
+
+    <div class="skills">
+        Charisma: <span id="charisma">0</span>
+        <div class="skill-bar"><div id="charisma-bar"></div></div>
+            <div class="tooltip">Charisma influences social interactions and leadership skills.</div>
+        <button onclick="addSkill('charisma')">+</button>
+        <button onclick="removeSkill('charisma')">-</button>
+    </div>
+    
+</div>
+                      
+        </div>
+            <button onclick="generateSheet()">Generate Character Sheet</button>
+        <div id="output"></div>
+    </div>
+</body>
+    <script src="Code/Code.js"></script>
+</html>
